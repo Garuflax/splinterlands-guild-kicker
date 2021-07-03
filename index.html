@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Splinterlands Guild Kicker</title>
+		<script src="code.js"></script>
+	</head>
+	<body>
+		<h1>Splinterlands Guild Kicker</h1>
+		<!-- Boton -->
+		<label for="gname">Guild:</label>
+		<input type="text" id="gname" placeholder="name"/>
+		<br/>
+		<label for="dec">Expected DEC per month:</label>
+		<input type="number" id="dec" placeholder="amount" value="300"/>
+		<br/>
+		<label for="quests">Expected quests per month:</label>
+		<input type="number" id="quests" placeholder="amount" value="30"/>
+		<br/>
+		<label for="considerLeague">Consider league:</label>
+		<input type="checkbox" id="considerLeague" checked/>
+		<br/>
+		<button id="button" onclick="listMembersToKick()">List members to kick!</button>
+		<br/>
+		<ul id="members"></ul>
+	</body>
+</html>
