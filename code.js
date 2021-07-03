@@ -74,7 +74,7 @@ function contributedEnough(member, dec, quests, considerLeague) {
   let monthsSinceJoinDate = monthsSince(new Date(member.join_date))
   let contributedDec = (data.contributions.guild_hall || 0) + ((data.contributions.arena && data.contributions.arena.DEC) || 0)
   let constributedQuests = data.contributions.quest_lodge || 0
-  let help = considerLeague ? 16 - member.league : 1
+  let help = considerLeague ? 6 - Math.floor(member.league / 3) : 1
   return monthsSinceJoinDate < (contributedDec/dec + constributedQuests/quests) * help
 }
 
